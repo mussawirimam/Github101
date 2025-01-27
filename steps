@@ -1,0 +1,20 @@
+1. create the ssh-keygen rsa for password less entry
+  a. copy the public key and put in your github account settings
+2. put the origin username and email
+3. add the origin url e.g:
+git remote set-url origin git@github.com:mussawirimam/Github101.git
+
+
+Trouble shoot commands
+ 2114  ls
+ 2115  git push -f origin main
+ 2116  ssh-add -l
+ 2117  git push -f origin main
+ 2118  ssh -T git@github.com
+ 2119  git push -f origin main
+ 2120  git remote -v
+ 2121  git remote set-url origin git@github.com:mussawirimam/Github101.git
+ 2122  git push --set-upstream origin main
+ 2123  git push -f origin main
+ 2124  history
+root@master:~/python101/Link
