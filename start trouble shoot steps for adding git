@@ -160,3 +160,8 @@ To github.com:mussawirimam/gittestdelete.git
  * [new branch]      main -> main
 Branch 'main' set up to track remote branch 'main' from 'origin'.
 controlplane $ 
+
+
+### next learn how to remove the origin-url from the git config and add a origin-url
+### and also learn how to switch between the different origin urls so that when you are doing the git push
+### you can direct it exactly which url point your are pushing your files to. 
