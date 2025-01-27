@@ -10,7 +10,7 @@ https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generati
   a. copy the public key in .ssh directory and put in your github account settings
 2. put the origin username and email
 3. add the origin url e.g:
-git remote set-url origin git@github.com:mussawirimam/Github101.git
+git remote set-url origin git@github.com:mussawirimam/<repisitoryname here>.git
 
 ### steps for pushing the code to github. Official steps:
 echo "# gittestdelete" >> README.md
@@ -56,7 +56,7 @@ Trouble shoot commands
  2118  ssh -T git@github.com
  2119  git push -f origin main
  2120  git remote -v
- 2121  git remote set-url origin git@github.com:mussawirimam/Github101.git <------- ### I learned this is the important command
+ 2121  git remote set-url origin git@github.com:mussawirimam/<repository name here>.git <------- ### I learned this is the important command
  2122  git push --set-upstream origin main
  2123  git push -f origin main
  2124  history
@@ -96,9 +96,9 @@ controlplane $ git commit -m "first commit"
 controlplane $ git push origin main
 error: src refspec main does not match any
 error: failed to push some refs to 'origin'
-controlplane $ git remote set-url origin git@github.com:mussawirimam/Github101.git
+controlplane $ git remote set-url origin git@github.com:mussawirimam/<repositoryname here>.git
 fatal: No such remote 'origin'
-controlplane $ git remote set-url origin git@github.com:mussawirimam/Github101.git
+controlplane $ git remote set-url origin git@github.com:mussawirimam/<repositoryname here>.git
 fatal: No such remote 'origin'
 controlplane $ git push origin main
 error: src refspec main does not match any
@@ -107,7 +107,7 @@ controlplane $ git branch -M main
 controlplane $ git remote add origin git@github.com:mussawirimam/gittestdelete.git
 controlplane $ git push -u origin main
 The authenticity of host 'github.com (20.26.156.215)' can't be established.
-ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+ECDSA key fingerprint is SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Warning: Permanently added 'github.com,20.26.156.215' (ECDSA) to the list of known hosts.
 ERROR: We're doing an SSH key audit.
@@ -115,7 +115,7 @@ Reason: unverified automatically (private key found in a public repository)
 Please visit https://github.com/settings/keys/75926309 to approve this key so we know it's safe.
 
 Fingerprint:
-SHA256:q90lhwtJI0plO0gcnYrhjqpIMS8fzsHyMGAga1nRElQ
+SHA256:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 fatal: Could not read from remote repository.
 
@@ -159,7 +159,7 @@ Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 226 bytes | 226.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
-To github.com:mussawirimam/gittestdelete.git
+To github.com:mussawirimam/<repositoryname here>.git
  * [new branch]      main -> main
 Branch 'main' set up to track remote branch 'main' from 'origin'.
 controlplane $ 
@@ -168,3 +168,34 @@ controlplane $
 ### next learn how to remove the origin-url from the git config and add a origin-url
 ### and also learn how to switch between the different origin urls so that when you are doing the git push
 ### you can direct it exactly which url point your are pushing your files to. 
+
+git config --unset <the config you want to delete>
+  e.g: 
+
+controlplane $ git config --list
+user.name=mussawirimam
+user.email=mussawirimam@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+
+### after this command it will take off the username and email.
+controlplane $ git config --global --unset user.email
+controlplane $ git config --global --unset user.name 
+
+controlplane $ git config --list
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+controlplane $ 
+
+
+### How to point to different origin urls?
