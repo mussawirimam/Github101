@@ -107,6 +107,16 @@ remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 remote.second-origin.fetch=+refs/heads/*:refs/remotes/second-origin/*
 root@master:~/Github101#
 
+root@master:~/Github101# git remote
+origin
+second-origin
+root@master:~/Github101# git remote remove second-origin
+root@master:~/Github101# git remote -v
+origin
+root@master:~/Github101#
+
+----------------------------------------------------------------------
+
 ### how to remove the username from the git config.
 root@master:~/Github101# git config -l
 user.name=mussawirimam    <----------------------- we will remove this with below command 
