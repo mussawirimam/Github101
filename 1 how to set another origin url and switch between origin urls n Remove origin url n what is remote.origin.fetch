@@ -1,0 +1,155 @@
+### how to add another origin url in git for github on linux machine and switch between the first and second ?
+
+To add another origin URL in Git and switch between the first and second on a Linux machine, you can follow these steps:
+
+Step 1: Check your current remotes
+First, see what remotes you currently have by running:
+
+bash
+Copy
+git remote -v
+This will show the current URLs associated with your remotes (usually, you’ll see something like origin with a URL).
+
+Step 2: Add a new remote
+To add a second remote (let's say you want to add a second remote named second-origin), use this command:
+
+bash
+Copy
+git remote add second-origin https://github.com/username/second-repository.git
+Make sure to replace https://github.com/username/second-repository.git with the actual URL of your second GitHub repository.
+
+Step 3: Verify the remotes
+To verify both the remotes are added successfully, run:
+
+bash
+Copy
+git remote -v
+You should see both origin and second-origin listed, each with their respective URLs.
+
+Step 4: Switch between remotes
+When you want to push or pull from a specific remote, use the following commands:
+
+To push to origin:
+bash
+Copy
+git push origin main
+To push to second-origin:
+bash
+Copy
+git push second-origin main
+Make sure to replace main with the appropriate branch name if you're working with a different branch.
+
+Step 5: Change the URL of an existing remote
+If you want to change the URL of an existing remote (e.g., change origin), use:
+
+bash
+Copy
+git remote set-url origin https://github.com/username/new-repository.git
+Step 6: Remove a remote (if needed)
+If you want to remove a remote that you no longer need, use:
+
+bash
+Copy
+
+----------------------------------------------------
+How to remove second-origin
+This will remove the second-origin remote.
+
+root@master:~/Github101# git remote add second-origin https://github.com/username/second-repository.git
+root@master:~/Github101# git remote -v
+origin  git@github.com:mussawirimam/gittestdelete.git (fetch)
+origin  git@github.com:mussawirimam/gittestdelete.git (push)
+second-origin   https://github.com/username/second-repository.git (fetch)
+second-origin   https://github.com/username/second-repository.git (push)
+root@master:~/Github101#
+
+
+### how to remove the second url?
+
+root@master:~/Github101# git config -l
+user.name=mussawirimam
+user.email=mussawirimam@gmail.com
+credential.helper=store
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@github.com:mussawirimam/gittestdelete.git   <-------------- this is removed 
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.second-origin.url=https://github.com/username/second-repository.git
+remote.second-origin.fetch=+refs/heads/*:refs/remotes/second-origin/*
+root@master:~/Github101# git config --unset remote.origin.url
+
+
+root@master:~/Github101# git config -l
+user.name=mussawirimam
+user.email=mussawirimam@gmail.com
+credential.helper=store
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.second-origin.url=https://github.com/username/second-repository.git    <------------- we will remove this next
+remote.second-origin.fetch=+refs/heads/*:refs/remotes/second-origin/*
+root@master:~/Github101#
+
+root@master:~/Github101# git config --unset remote.second-origin.url
+root@master:~/Github101# git config -l
+user.name=mussawirimam
+user.email=mussawirimam@gmail.com
+credential.helper=store
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.second-origin.fetch=+refs/heads/*:refs/remotes/second-origin/*
+root@master:~/Github101#
+
+### how to remove the username from the git config.
+root@master:~/Github101# git config -l
+user.name=mussawirimam    <----------------------- we will remove this with below command 
+user.email=mussawirimam@gmail.com
+credential.helper=store
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.second-origin.fetch=+refs/heads/*:refs/remotes/second-origin/*
+root@master:~/Github101# git config --unset --global user.name
+
+root@master:~/Github101# git config -l
+user.email=mussawirimam@gmail.com
+credential.helper=store
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.second-origin.fetch=+refs/heads/*:refs/remotes/second-origin/*
+root@master:~/Github101#
+----------------------------------------------------------------------
+### what is the remote.origin.fetch? 
+The configuration setting remote.origin.fetch=+refs/heads/*:refs/remotes/origin/* is part of Git's configuration and controls how references (branches) are fetched from the remote repository when you run git fetch.
+
+Let's break it down:
+
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.origin.fetch: This defines the behavior for fetching branches from the remote named origin. In your case, it's the default remote that points to the repository you cloned from.
++refs/heads/*: This specifies which references (branches) to fetch from the remote. The refs/heads/* part means "all branches from the origin remote" (in this case, all branches under refs/heads/, which is where branches are stored in Git).
+:refs/remotes/origin/*: This defines where to store the fetched branches locally. The refs/remotes/origin/* part means "store the branches from origin under the refs/remotes/origin/ prefix in your local repository." Git fetches the remote branches and creates a tracking branch under refs/remotes/origin/ (e.g., refs/remotes/origin/main).
+The + Sign
+The + before refs/heads/* indicates that Git should force update your local tracking branches, even if the remote branches have diverged or have been rewritten. This ensures that when you fetch, Git will update the tracking branches without any conflicts.
+
+Your Second Remote (remote.second-origin.fetch)
+Similarly, the configuration remote.second-origin.fetch=+refs/heads/*:refs/remotes/second-origin/* applies to the remote named second-origin. It means Git will fetch all branches from second-origin and store them locally under refs/remotes/second-origin/.
+
+Why is this Useful?
+When you fetch changes from a remote, Git uses these settings to determine how to download and store branch data.
+For example, after fetching, if you run git branch -r, you'll see all the remote branches listed under refs/remotes/origin/ (for the origin remote) and refs/remotes/second-origin/ (for the second-origin remote).
+In summary, this setting is there to ensure that branches from both your remotes (origin and second-origin) are fetched and stored in the proper local references, allowing you to track them independently.
+
+Let me know if you need more details or if you'd like help with anything else!
+----------------------------------------------------------------------
