@@ -1,8 +1,48 @@
+### doc for creating the sshkey 
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+### intitial steps for setting up the git on your system 
 1. create the ssh-keygen rsa for password less entry
-  a. copy the public key and put in your github account settings
+  command: ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+  a. copy the public key in .ssh directory and put in your github account settings
 2. put the origin username and email
 3. add the origin url e.g:
 git remote set-url origin git@github.com:mussawirimam/Github101.git
+
+### steps for pushing the code to github. Official steps:
+echo "# gittestdelete" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:mussawirimam/gittestdelete.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin git@github.com:mussawirimam/gittestdelete.git
+git branch -M main
+git push -u origin main
+
+controlplane $ ls
+README.md
+controlplane $ git init
+Initialized empty Git repository in /root/killercoda/.git/
+controlplane $ git add README.md
+controlplane $ git commit -m "first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'root@controlplane.(none)')
+controlplane $ 
+
 
 
 Trouble shoot commands
@@ -18,3 +58,105 @@ Trouble shoot commands
  2123  git push -f origin main
  2124  history
 root@master:~/python101/Link
+
+
+
+
+
+
+------------------------------------------------------------------------------------------
+FOLLOW THE STEPS BELOW 
+controlplane $ ls
+README.md
+controlplane $ git init
+Initialized empty Git repository in /root/killercoda/.git/
+controlplane $ git add README.md
+controlplane $ git commit -m "first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'root@controlplane.(none)')
+controlplane $ git config --global user.email "mussawirimam@gmail.com"
+controlplane $ git config --global user.name "mussawirimam"
+controlplane $ git commit -m "first commit"
+[master (root-commit) 6d9adc2] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+controlplane $ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+controlplane $ git remote set-url origin git@github.com:mussawirimam/Github101.git
+fatal: No such remote 'origin'
+controlplane $ git remote set-url origin git@github.com:mussawirimam/Github101.git
+fatal: No such remote 'origin'
+controlplane $ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+controlplane $ git branch -M main
+controlplane $ git remote add origin git@github.com:mussawirimam/gittestdelete.git
+controlplane $ git push -u origin main
+The authenticity of host 'github.com (20.26.156.215)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,20.26.156.215' (ECDSA) to the list of known hosts.
+ERROR: We're doing an SSH key audit.
+Reason: unverified automatically (private key found in a public repository)
+Please visit https://github.com/settings/keys/75926309 to approve this key so we know it's safe.
+
+Fingerprint:
+SHA256:q90lhwtJI0plO0gcnYrhjqpIMS8fzsHyMGAga1nRElQ
+
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+controlplane $ ls
+README.md
+controlplane $ ssh-keygen -t rsa -b 4096 -C "mussawirimam@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+/root/.ssh/id_rsa already exists.
+Overwrite (y/n)? 
+controlplane $ 
+controlplane $ 
+controlplane $ ssh-keygen -t rsa -b 4096 -C "mussawirimam@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+/root/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa
+Your public key has been saved in /root/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:PZ/xxxxxxxxxxxxxxxxxxxxxxx mussawirimam@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|                 | 
+|                 |
+|                 |
++----[SHA256]-----+
+controlplane $ 
+controlplane $ ls
+README.md
+controlplane $ cat ~/.ssh/
+authorized_keys  id_rsa           id_rsa.pub       known_hosts      
+controlplane $ cat ~/.ssh/id_rsa.pub 
+ssh-rsa xxxxxxxxxxxxxxxxxxxxxxxx == mussawirimam@gmail.com
+controlplane $ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 226 bytes | 226.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:mussawirimam/gittestdelete.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+controlplane $ 
