@@ -130,6 +130,24 @@ core.logallrefupdates=true
 remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
 remote.second-origin.fetch=+refs/heads/*:refs/remotes/second-origin/*
 root@master:~/Github101#
+
+### we have added back the global user name
+root@master:~/Github101# git config --global user.name "mussawirimam"
+root@master:~/Github101# git config -l
+user.email=mussawirimam@gmail.com
+user.name=mussawirimam
+credential.helper=store
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+remote.second-origin.fetch=+refs/heads/*:refs/remotes/second-origin/*
+root@master:~/Github101#
+
+--global: The setting applies to all repositories on your machine (e.g., your username, email, etc.).
+Without --global: The setting applies only to the current repository.
+
 ----------------------------------------------------------------------
 ### what is the remote.origin.fetch? 
 The configuration setting remote.origin.fetch=+refs/heads/*:refs/remotes/origin/* is part of Git's configuration and controls how references (branches) are fetched from the remote repository when you run git fetch.
