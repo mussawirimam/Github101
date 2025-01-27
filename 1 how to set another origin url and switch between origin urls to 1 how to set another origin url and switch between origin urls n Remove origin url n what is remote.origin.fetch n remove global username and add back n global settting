@@ -1,4 +1,5 @@
 ### how to add another origin url in git for github on linux machine and switch between the first and second ?
+### READ THIS: https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories <------------------- you can find this in your repo as quesiton mark
 
 To add another origin URL in Git and switch between the first and second on a Linux machine, you can follow these steps:
 
