@@ -1,0 +1,55 @@
+### how to add another origin url in git for github on linux machine and switch between the first and second ?
+
+To add another origin URL in Git and switch between the first and second on a Linux machine, you can follow these steps:
+
+Step 1: Check your current remotes
+First, see what remotes you currently have by running:
+
+bash
+Copy
+git remote -v
+This will show the current URLs associated with your remotes (usually, you’ll see something like origin with a URL).
+
+Step 2: Add a new remote
+To add a second remote (let's say you want to add a second remote named second-origin), use this command:
+
+bash
+Copy
+git remote add second-origin https://github.com/username/second-repository.git
+Make sure to replace https://github.com/username/second-repository.git with the actual URL of your second GitHub repository.
+
+Step 3: Verify the remotes
+To verify both the remotes are added successfully, run:
+
+bash
+Copy
+git remote -v
+You should see both origin and second-origin listed, each with their respective URLs.
+
+Step 4: Switch between remotes
+When you want to push or pull from a specific remote, use the following commands:
+
+To push to origin:
+bash
+Copy
+git push origin main
+To push to second-origin:
+bash
+Copy
+git push second-origin main
+Make sure to replace main with the appropriate branch name if you're working with a different branch.
+
+Step 5: Change the URL of an existing remote
+If you want to change the URL of an existing remote (e.g., change origin), use:
+
+bash
+Copy
+git remote set-url origin https://github.com/username/new-repository.git
+Step 6: Remove a remote (if needed)
+If you want to remove a remote that you no longer need, use:
+
+bash
+Copy
+git remote remove second-origin
+This will remove the second-origin remote.
+
