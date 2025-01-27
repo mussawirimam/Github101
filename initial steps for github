@@ -1,0 +1,21 @@
+1. create a test repository 
+2. copy the commands for intial repository on the notepad
+3. go to your Linux box on killer coda
+    a. generate the ssh-keygen command      
+     ssh-keygen -t rsa -b 4096 -C "your_email@example.com" > enter enter enter enter 
+       i. i. cd to ~/.ssh > cat ssh_rsa.pub > copy the key
+    b. put it inside your GitHub profile setting. 
+        i. click on the GitHub profile > click on settings > click on ssh and gpg keys
+4. clone your test GH respository 
+    git clone <https://........git>
+5. create a directory and file
+mkdir test
+touch helloworld.txt
+6. git init
+7. git add * 
+  i. it might show you to add  --global origin username and origin email. Use the commands on prompt to add it in your git config
+  ii. add the git origin url also if you get any errors
+8 . commit -m " hello from killercoda" 
+9. git push origin main
+10. if you are having any troubles, follow the trouble shooting page 
+https://github.com/mussawirimam/Github101/blob/main/start%20trouble%20shoot%20steps%20for%20adding%20git 
