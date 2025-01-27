@@ -1,7 +1,10 @@
 ### doc for creating the sshkey 
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+### Use killercoda to practice: https://killercoda.com/
+
 
 ### intitial steps for setting up the git on your system 
+0. create a git repository on github for testing, which later you can delete it. Use throwaway repoisitory to practice. 
 1. create the ssh-keygen rsa for password less entry
   command: ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
   a. copy the public key in .ssh directory and put in your github account settings
@@ -53,7 +56,7 @@ Trouble shoot commands
  2118  ssh -T git@github.com
  2119  git push -f origin main
  2120  git remote -v
- 2121  git remote set-url origin git@github.com:mussawirimam/Github101.git
+ 2121  git remote set-url origin git@github.com:mussawirimam/Github101.git <------- ### I learned this is the important command
  2122  git push --set-upstream origin main
  2123  git push -f origin main
  2124  history
