@@ -63,10 +63,52 @@ Trouble shoot commands
 root@master:~/python101/Link
 
 
+### ERROR: error: failed to push some refs to 'github.com:mussawirimam/gittestdelete.git'
+#The error message you're encountering (failed to push some refs) usually happens when there is a mismatch between your local branch and the remote repository. Here are some common causes and solutions:
 
-
-
-
+root@master:~/app/helm# git push -f origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:mussawirimam/gittestdelete.git'
+root@master:~/app/helm# ls
+gittestdelete  mychat  package
+root@master:~/app/helm# git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 206 bytes | 206.00 KiB/s, done.
+From github.com:mussawirimam/gittestdelete
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+root@master:~/app/helm# ls
+gittestdelete  mychat  package  README.md
+root@master:~/app/helm# git push origin main
+Everything up-to-date
+root@master:~/app/helm# git commit -m "helm package"
+[main 29387ef] helm package
+ 9 files changed, 102 insertions(+)
+ create mode 160000 gittestdelete
+ create mode 100644 mychat/.helmignore
+ create mode 100644 mychat/Chart.yaml
+ create mode 100644 mychat/templates/NOTES.txt
+ create mode 100644 mychat/templates/_helpers.tpl
+ create mode 100644 mychat/templates/deployment.yaml
+ create mode 100644 mychat/templates/service.yaml
+ create mode 100644 mychat/values.yaml
+ create mode 160000 package
+root@master:~/app/helm# git push origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 2.29 KiB | 469.00 KiB/s, done.
+Total 11 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:mussawirimam/gittestdelete.git
+   678af2c..29387ef  main -> main
+root@master:~/app/helm#
+root@master:~/app/helm# git status
+On branch main
+nothing to commit, working tree clean
+root@master:~/app/helm#
 ------------------------------------------------------------------------------------------
 FOLLOW THE STEPS BELOW 
 controlplane $ ls
