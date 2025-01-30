@@ -241,3 +241,1132 @@ controlplane $
 
 
 ### How to point to different origin urls?
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm# [200~git add -u~^C
+root@master:~/app/helm# git add -u
+root@master:~/app/helm# git commit -m "Remove previously deleted files"
+[main 050f7fe] Remove previously deleted files
+ 4 files changed, 2 deletions(-)
+ delete mode 100644 gittest/hellohello.txt
+ delete mode 100644 gittest/main
+ delete mode 160000 testgit/Github101
+ delete mode 100644 testgit/helloworl.txt
+root@master:~/app/helm# git add --
+--all                  --force                --intent-to-add        --patch                --renormalize
+--chmod=               --ignore-errors        --interactive          --pathspec-file-nul    --sparse
+--dry-run              --ignore-missing       --no-...               --pathspec-from-file=  --update
+--edit                 --ignore-removal       --no-dry-run           --refresh              --verbose
+root@master:~/app/helm# git add --help
+root@master:~/app/helm# git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../.bash_history
+        ../../.bashrc
+        ../../.cache/
+        ../../.config/
+        ../../.gitconfig
+        ../../.kube/
+        ../../.lesshst
+        ../../.local/
+        ../../.nanorc
+        ../../.profile
+        ../../.ssh/
+        ../../.vim/
+        ../../.viminfo
+        ../../.wget-hsts
+        ../../Github101/
+        ../../apache.yaml
+        ../ingress.yaml
+        ../mysqlClusterIP.yaml
+        ../mysqlClusterIP.yaml.save
+        ../network/
+        ../pod.yaml
+        ../rbac/
+        ../replication/
+        ../scheduling/
+        ../secretsandconfigmap/
+        ../static-pod.yaml
+        ../test2/
+        ../volume/
+        ../wordpressNodePort.yaml
+        ../../install.sh
+        ../../pvc.yaml
+        ../../snap/
+        ../../v3.17.0.tar.gz
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@master:~/app/helm# git rm --cached <file>
+-bash: syntax error near unexpected token `newline'
+root@master:~/app/helm# git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../.bash_history
+        ../../.bashrc
+        ../../.cache/
+        ../../.config/
+        ../../.gitconfig
+        ../../.kube/
+        ../../.lesshst
+        ../../.local/
+        ../../.nanorc
+        ../../.profile
+        ../../.ssh/
+        ../../.vim/
+        ../../.viminfo
+        ../../.wget-hsts
+        ../../Github101/
+        ../../apache.yaml
+        ../ingress.yaml
+        ../mysqlClusterIP.yaml
+        ../mysqlClusterIP.yaml.save
+        ../network/
+        ../pod.yaml
+        ../rbac/
+        ../replication/
+        ../scheduling/
+        ../secretsandconfigmap/
+        ../static-pod.yaml
+        ../test2/
+        ../volume/
+        ../wordpressNodePort.yaml
+        ../../install.sh
+        ../../pvc.yaml
+        ../../snap/
+        ../../v3.17.0.tar.gz
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@master:~/app/helm# git stash
+git reset --hard
+No local changes to save
+HEAD is now at 050f7fe Remove previously deleted files
+root@master:~/app/helm# git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../.bash_history
+        ../../.bashrc
+        ../../.cache/
+        ../../.config/
+        ../../.gitconfig
+        ../../.kube/
+        ../../.lesshst
+        ../../.local/
+        ../../.nanorc
+        ../../.profile
+        ../../.ssh/
+        ../../.vim/
+        ../../.viminfo
+        ../../.wget-hsts
+        ../../Github101/
+        ../../apache.yaml
+        ../ingress.yaml
+        ../mysqlClusterIP.yaml
+        ../mysqlClusterIP.yaml.save
+        ../network/
+        ../pod.yaml
+        ../rbac/
+        ../replication/
+        ../scheduling/
+        ../secretsandconfigmap/
+        ../static-pod.yaml
+        ../test2/
+        ../volume/
+        ../wordpressNodePort.yaml
+        ../../install.sh
+        ../../pvc.yaml
+        ../../snap/
+        ../../v3.17.0.tar.gz
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@master:~/app/helm# git log --oneline
+050f7fe (HEAD -> main) Remove previously deleted files
+81f6450 (origin/main) helm repo
+bce34c2 hello hello
+776257f hello world
+root@master:~/app/helm# git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../.bash_history
+        ../../.bashrc
+        ../../.cache/
+        ../../.config/
+        ../../.gitconfig
+        ../../.kube/
+        ../../.lesshst
+        ../../.local/
+        ../../.nanorc
+        ../../.profile
+        ../../.ssh/
+        ../../.vim/
+        ../../.viminfo
+        ../../.wget-hsts
+        ../../Github101/
+        ../../apache.yaml
+        ../ingress.yaml
+        ../mysqlClusterIP.yaml
+        ../mysqlClusterIP.yaml.save
+        ../network/
+        ../pod.yaml
+        ../rbac/
+        ../replication/
+        ../scheduling/
+        ../secretsandconfigmap/
+        ../static-pod.yaml
+        ../test2/
+        ../volume/
+        ../wordpressNodePort.yaml
+        ../../install.sh
+        ../../pvc.yaml
+        ../../snap/
+        ../../v3.17.0.tar.gz
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@master:~/app/helm# git clean -n
+root@master:~/app/helm# git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../.bash_history
+        ../../.bashrc
+        ../../.cache/
+        ../../.config/
+        ../../.gitconfig
+        ../../.kube/
+        ../../.lesshst
+        ../../.local/
+        ../../.nanorc
+        ../../.profile
+        ../../.ssh/
+        ../../.vim/
+        ../../.viminfo
+        ../../.wget-hsts
+        ../../Github101/
+        ../../apache.yaml
+        ../ingress.yaml
+        ../mysqlClusterIP.yaml
+        ../mysqlClusterIP.yaml.save
+        ../network/
+        ../pod.yaml
+        ../rbac/
+        ../replication/
+        ../scheduling/
+        ../secretsandconfigmap/
+        ../static-pod.yaml
+        ../test2/
+        ../volume/
+        ../wordpressNodePort.yaml
+        ../../install.sh
+        ../../pvc.yaml
+        ../../snap/
+        ../../v3.17.0.tar.gz
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@master:~/app/helm#
+root@master:~/app/helm#
+root@master:~/app/helm# git clean -f
+root@master:~/app/helm# git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../.bash_history
+        ../../.bashrc
+        ../../.cache/
+        ../../.config/
+        ../../.gitconfig
+        ../../.kube/
+        ../../.lesshst
+        ../../.local/
+        ../../.nanorc
+        ../../.profile
+        ../../.ssh/
+        ../../.vim/
+        ../../.viminfo
+        ../../.wget-hsts
+        ../../Github101/
+        ../../apache.yaml
+        ../ingress.yaml
+        ../mysqlClusterIP.yaml
+        ../mysqlClusterIP.yaml.save
+        ../network/
+        ../pod.yaml
+        ../rbac/
+        ../replication/
+        ../scheduling/
+        ../secretsandconfigmap/
+        ../static-pod.yaml
+        ../test2/
+        ../volume/
+        ../wordpressNodePort.yaml
+        ../../install.sh
+        ../../pvc.yaml
+        ../../snap/
+        ../../v3.17.0.tar.gz
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@master:~/app/helm# git clean -fd
+root@master:~/app/helm# git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../../.bash_history
+        ../../.bashrc
+        ../../.cache/
+        ../../.config/
+        ../../.gitconfig
+        ../../.kube/
+        ../../.lesshst
+        ../../.local/
+        ../../.nanorc
+        ../../.profile
+        ../../.ssh/
+        ../../.vim/
+        ../../.viminfo
+        ../../.wget-hsts
+        ../../Github101/
+        ../../apache.yaml
+        ../ingress.yaml
+        ../mysqlClusterIP.yaml
+        ../mysqlClusterIP.yaml.save
+        ../network/
+        ../pod.yaml
+        ../rbac/
+        ../replication/
+        ../scheduling/
+        ../secretsandconfigmap/
+        ../static-pod.yaml
+        ../test2/
+        ../volume/
+        ../wordpressNodePort.yaml
+        ../../install.sh
+        ../../pvc.yaml
+        ../../snap/
+        ../../v3.17.0.tar.gz
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm# ls package/
+index.yaml  mychat-0.1.0.tgz
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm# ls -al
+total 16
+drwxr-xr-x  4 root root 4096 Jan 30 15:37 .
+drwxr-xr-x 10 root root 4096 Jan 30 14:25 ..
+drwxr-xr-x  3 root root 4096 Jan 30 15:26 mychat
+drwxr-xr-x  2 root root 4096 Jan 30 14:59 package
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm#
+root@master:~/app/helm#
+root@master:~/app/helm#
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm# cd ..
+root@master:~/app# ls
+helm          mysqlClusterIP.yaml       network   rbac         scheduling           static-pod.yaml  volume
+ingress.yaml  mysqlClusterIP.yaml.save  pod.yaml  replication  secretsandconfigmap  test2            wordpressNodePort.yaml
+root@master:~/app# ls -al
+total 64
+drwxr-xr-x 10 root root 4096 Jan 30 14:25 .
+drwx------ 12 root root 4096 Jan 30 15:42 ..
+drwxr-xr-x  4 root root 4096 Jan 30 15:37 helm
+-rw-r--r--  1 root root  588 Jan 19 16:52 ingress.yaml
+-rw-r--r--  1 root root  542 Nov 21 20:24 mysqlClusterIP.yaml
+-rw-r--r--  1 root root  277 Nov 21 21:44 mysqlClusterIP.yaml.save
+drwxr-xr-x  2 root root 4096 Jan 11 12:39 network
+-rw-r--r--  1 root root  169 Jan  5 20:07 pod.yaml
+drwxr-xr-x  2 root root 4096 Jan 15 16:58 rbac
+drwxr-xr-x  2 root root 4096 Jan  1 20:08 replication
+drwxr-xr-x  2 root root 4096 Dec 30 07:46 scheduling
+drwxr-xr-x  2 root root 4096 Jan  6 08:09 secretsandconfigmap
+-rw-r--r--  1 root root  182 Jan  5 20:09 static-pod.yaml
+drwxr-xr-x  4 root root 4096 Jan 25 21:31 test2
+drwxr-xr-x  2 root root 4096 Jan  9 07:25 volume
+-rw-r--r--  1 root root  593 Nov 21 20:45 wordpressNodePort.yaml
+root@master:~/app# cd helm
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm# cd mychat/
+root@master:~/app/helm/mychat# ls -al
+total 24
+drwxr-xr-x 3 root root 4096 Jan 30 15:26 .
+drwxr-xr-x 4 root root 4096 Jan 30 15:37 ..
+-rw-r--r-- 1 root root 1142 Jan 30 14:26 Chart.yaml
+-rw-r--r-- 1 root root  349 Jan 30 14:26 .helmignore
+drwxr-xr-x 2 root root 4096 Jan 30 14:51 templates
+-rw-r--r-- 1 root root  128 Jan 30 14:38 values.yaml
+root@master:~/app/helm/mychat# cd ,,
+-bash: cd: ,,: No such file or directory
+root@master:~/app/helm/mychat# cd ..
+root@master:~/app/helm# git add *
+root@master:~/app/helm# ls -al
+total 16
+drwxr-xr-x  4 root root 4096 Jan 30 15:37 .
+drwxr-xr-x 10 root root 4096 Jan 30 14:25 ..
+drwxr-xr-x  3 root root 4096 Jan 30 15:26 mychat
+drwxr-xr-x  2 root root 4096 Jan 30 14:59 package
+root@master:~/app/helm# git init
+Initialized empty Git repository in /root/app/helm/.git/
+root@master:~/app/helm# ls -al
+total 20
+drwxr-xr-x  5 root root 4096 Jan 30 15:48 .
+drwxr-xr-x 10 root root 4096 Jan 30 14:25 ..
+drwxr-xr-x  7 root root 4096 Jan 30 15:48 .git
+drwxr-xr-x  3 root root 4096 Jan 30 15:26 mychat
+drwxr-xr-x  2 root root 4096 Jan 30 14:59 package
+root@master:~/app/helm# cd /root/app/helm/.git
+root@master:~/app/helm/.git# ls
+branches  config  description  HEAD  hooks  info  objects  refs
+root@master:~/app/helm/.git# tree
+.
+├── branches
+├── config
+├── description
+├── HEAD
+├── hooks
+│   ├── applypatch-msg.sample
+│   ├── commit-msg.sample
+│   ├── fsmonitor-watchman.sample
+│   ├── post-update.sample
+│   ├── pre-applypatch.sample
+│   ├── pre-commit.sample
+│   ├── pre-merge-commit.sample
+│   ├── prepare-commit-msg.sample
+│   ├── pre-push.sample
+│   ├── pre-rebase.sample
+│   ├── pre-receive.sample
+│   ├── push-to-checkout.sample
+│   ├── sendemail-validate.sample
+│   └── update.sample
+├── info
+│   └── exclude
+├── objects
+│   ├── info
+│   └── pack
+└── refs
+    ├── heads
+    └── tags
+
+10 directories, 18 files
+root@master:~/app/helm/.git# cd ..
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm# ls -al
+total 20
+drwxr-xr-x  5 root root 4096 Jan 30 15:48 .
+drwxr-xr-x 10 root root 4096 Jan 30 14:25 ..
+drwxr-xr-x  7 root root 4096 Jan 30 15:48 .git
+drwxr-xr-x  3 root root 4096 Jan 30 15:26 mychat
+drwxr-xr-x  2 root root 4096 Jan 30 14:59 package
+root@master:~/app/helm# git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+root@master:~/app/helm# git pull origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+root@master:~/app/helm# git config -l
+user.email=mussawirimam@gmail.com
+user.name=mussawirimam
+credential.helper=cache
+init.defaultbranch=main
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+root@master:~/app/helm# git add origin ^C
+root@master:~/app/helm# git remote add origin git@github.com:mussawirimam/hrepo.git
+root@master:~/app/helm# git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:mussawirimam/hrepo.git'
+root@master:~/app/helm# git remote rm origin
+root@master:~/app/helm# git remote add origin git@github.com:mussawirimam/hrepo.git
+root@master:~/app/helm# git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'github.com:mussawirimam/hrepo.git'
+root@master:~/app/helm# git commit -m 'new'
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mychat/
+        package/
+
+nothing added to commit but untracked files present (use "git add" to track)
+root@master:~/app/helm# git add *
+root@master:~/app/helm# git commit -m 'new'
+[main (root-commit) 98f1847] new
+ 8 files changed, 104 insertions(+)
+ create mode 100644 mychat/.helmignore
+ create mode 100644 mychat/Chart.yaml
+ create mode 100644 mychat/templates/_helpers.tpl
+ create mode 100644 mychat/templates/deployment.yaml
+ create mode 100644 mychat/templates/service.yaml
+ create mode 100644 mychat/values.yaml
+ create mode 100644 package/index.yaml
+ create mode 100644 package/mychat-0.1.0.tgz
+root@master:~/app/helm# git commit -m 'new'
+On branch main
+nothing to commit, working tree clean
+root@master:~/app/helm# git push origin main
+To github.com:mussawirimam/hrepo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:mussawirimam/hrepo.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+root@master:~/app/helm# git pull origin main
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 24 (delta 0), reused 24 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (24/24), 3.99 KiB | 240.00 KiB/s, done.
+From github.com:mussawirimam/hrepo
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+root@master:~/app/helm# git config pull.rebase false
+root@master:~/app/helm# git push origin main
+To github.com:mussawirimam/hrepo.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:mussawirimam/hrepo.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+root@master:~/app/helm# git config pull.rebase true
+root@master:~/app/helm# git push origin main
+To github.com:mussawirimam/hrepo.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:mussawirimam/hrepo.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+root@master:~/app/helm# git config -l
+user.email=mussawirimam@gmail.com
+user.name=mussawirimam
+credential.helper=cache
+init.defaultbranch=main
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@github.com:mussawirimam/hrepo.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+pull.rebase=true
+root@master:~/app/helm# git config edit
+error: key does not contain a section: edit
+root@master:~/app/helm# git config
+add.               clean.             diff.              gitweb.            init.              pack.              revert.            tar.
+advice.            clone.             difftool.          gpg.               instaweb.          pager.             safe.              trace2.
+alias.             color.             extensions.        grep.              interactive.       pretty.            sendemail.         transfer.
+am.                column.            fastimport.        gui.               log.               protocol.          sequence.          uploadarchive.
+apply.             commit.            feature.           guitool.           lsrefs.            pull.              showBranch.        uploadpack.
+attr.              commitGraph.       fetch.             help.              mailinfo.          push.              sparse.            uploadpackfilter.
+author.            committer.         filter.            http.              mailmap.           rebase.            splitIndex.        url.
+blame.             completion.        format.            i18n.              maintenance.       receive.           ssh.               user.
+branch.            core.              fsck.              imap.              man.               remote.            stash.             versionsort.
+browser.           credential.        fsmonitor.         include.           merge.             remotes.           status.            web.
+bundle.            credentialCache.   gc.                includeIf.         mergetool.         repack.            submodule.         worktree.
+checkout.          credentialStore.   gitcvs.            index.             notes.             rerere.            tag.
+root@master:~/app/helm# git config extensions.
+extensions.objectFormat     extensions.worktreeConfig
+root@master:~/app/helm# git config --
+--add              --default=         --get              --get-urlmatch     --local            --path             --show-scope       --worktree
+--blob=            --edit             --get-all          --global           --name-only        --remove-section   --system
+--bool             --expiry-date      --get-color        --includes         --no-...           --rename-section   --type=
+--bool-or-int      --file=            --get-colorbool    --int              --no-global        --replace-all      --unset
+--bool-or-str      --fixed-value      --get-regexp       --list             --null             --show-origin      --unset-all
+root@master:~/app/helm# git config --edit
+add.               clean.             diff.              gitweb.            init.              pack.              revert.            tar.
+advice.            clone.             difftool.          gpg.               instaweb.          pager.             safe.              trace2.
+alias.             color.             extensions.        grep.              interactive.       pretty.            sendemail.         transfer.
+am.                column.            fastimport.        gui.               log.               protocol.          sequence.          uploadarchive.
+apply.             commit.            feature.           guitool.           lsrefs.            pull.              showBranch.        uploadpack.
+attr.              commitGraph.       fetch.             help.              mailinfo.          push.              sparse.            uploadpackfilter.
+author.            committer.         filter.            http.              mailmap.           rebase.            splitIndex.        url.
+blame.             completion.        format.            i18n.              maintenance.       receive.           ssh.               user.
+branch.            core.              fsck.              imap.              man.               remote.            stash.             versionsort.
+browser.           credential.        fsmonitor.         include.           merge.             remotes.           status.            web.
+bundle.            credentialCache.   gc.                includeIf.         mergetool.         repack.            submodule.         worktree.
+checkout.          credentialStore.   gitcvs.            index.             notes.             rerere.            tag.
+root@master:~/app/helm# git config --edit
+root@master:~/app/helm# root@master:~/app/helm# git config --edit
+root@master:~/app/helm# git push origin main
+To github.com:mussawirimam/hrepo.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:mussawirimam/hrepo.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+root@master:~/app/helm# git config -l
+user.email=mussawirimam@gmail.com
+user.name=mussawirimam
+credential.helper=cache
+init.defaultbranch=main
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@github.com:mussawirimam/hrepo.git
+remote.origin.fetch=
+pull.rebase=true
+root@master:~/app/helm# git push origin main
+To github.com:mussawirimam/hrepo.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:mussawirimam/hrepo.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+root@master:~/app/helm# git branch last
+root@master:~/app/helm# git checkout last
+Switched to branch 'last'
+root@master:~/app/helm# git add *
+root@master:~/app/helm# git commit -m 'this is for last branch'
+On branch last
+nothing to commit, working tree clean
+root@master:~/app/helm# git push origin last
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 3.22 KiB | 549.00 KiB/s, done.
+Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'last' on GitHub by visiting:
+remote:      https://github.com/mussawirimam/hrepo/pull/new/last
+remote:
+To github.com:mussawirimam/hrepo.git
+ * [new branch]      last -> last
+root@master:~/app/helm# git status
+On branch last
+nothing to commit, working tree clean
+root@master:~/app/helm# git checkout main
+Switched to branch 'main'
+root@master:~/app/helm# git status
+On branch main
+nothing to commit, working tree clean
+root@master:~/app/helm# git checkout
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm# git checkout
+FETCH_HEAD    HEAD          last          main          origin/main
+root@master:~/app/helm# git status
+mychat/  package/
+root@master:~/app/helm# git status --
+--ahead-behind        --find-renames        --long                --null                --short               --verbose
+--branch              --ignored             --no-...              --porcelain           --show-stash
+--column              --ignore-submodules   --no-renames          --renames             --untracked-files
+root@master:~/app/helm# git status
+mychat/  package/
+root@master:~/app/helm# git status --ignore
+error: ambiguous option: ignore (could be --ignored or --ignore-submodules)
+usage: git status [<options>] [--] [<pathspec>...]
+
+    -v, --[no-]verbose    be verbose
+    -s, --[no-]short      show status concisely
+    -b, --[no-]branch     show branch information
+    --[no-]show-stash     show stash information
+    --[no-]ahead-behind   compute full ahead/behind values
+    --[no-]porcelain[=<version>]
+                          machine-readable output
+    --[no-]long           show status in long format (default)
+    -z, --[no-]null       terminate entries with NUL
+    -u, --[no-]untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --[no-]ignored[=<mode>]
+                          show ignored files, optional modes: traditional, matching, no. (Default: traditional)
+    --[no-]ignore-submodules[=<when>]
+                          ignore changes to submodules, optional when: all, dirty, untracked. (Default: all)
+    --[no-]column[=<style>]
+                          list untracked files in columns
+    --no-renames          do not detect renames
+    --renames             opposite of --no-renames
+    -M, --find-renames[=<n>]
+                          detect renames, optionally set similarity index
+
+root@master:~/app/helm# git status --ignored
+On branch main
+nothing to commit, working tree clean
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm# git checkout HEAD
+root@master:~/app/helm# git checkout -l
+root@master:~/app/helm# git branch -l
+  last
+* main
+root@master:~/app/helm# git checkout --
+--conflict=                   --ignore-skip-worktree-bits   --orphan=                     --pathspec-file-nul           --recurse-submodules
+--detach                      --merge                       --ours                        --pathspec-from-file=         --theirs
+--guess                       --no-...                      --overlay                     --progress                    --track
+--ignore-other-worktrees      --no-guess                    --patch                       --quiet
+root@master:~/app/helm# git checkout
+FETCH_HEAD    HEAD          last          main          origin/main
+root@master:~/app/helm# git checkout origin/main
+Note: switching to 'origin/main'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 81f6450 helm repo
+root@master:~/app/helm# git push origin
+FETCH_HEAD    HEAD          last          main          origin/main
+root@master:~/app/helm# git push origin origin/main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:mussawirimam/hrepo.git
+ * [new reference]   origin/main -> origin/main
+root@master:~/app/helm# git push -f origin origin/main
+Everything up-to-date
+root@master:~/app/helm# git push -f origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:mussawirimam/hrepo.git
+ + 81f6450...98f1847 main -> main (forced update)
+root@master:~/app/helm# git switch -
+Previous HEAD position was 81f6450 helm repo
+Switched to branch 'main'
+root@master:~/app/helm# git push -f origin main
+Everything up-to-date
+root@master:~/app/helm#
+
+
+
+
+
+
+
+
+####### I did git rm -r * and it made me lose all work and then below are the step is how I recovered all the files:
+
+
+root@master:~/app/helm# git rm -r *
+rm 'mychat/.helmignore'
+rm 'mychat/Chart.yaml'
+rm 'mychat/templates/_helpers.tpl'
+rm 'mychat/templates/deployment.yaml'
+rm 'mychat/templates/service.yaml'
+rm 'mychat/values.yaml'
+rm 'package/index.yaml'
+rm 'package/mychat-0.1.0.tgz'
+
+root@master:~/app/helm# ls
+root@master:~/app/helm#
+
+
+root@master:~/app/helm# git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    mychat/.helmignore
+        deleted:    mychat/Chart.yaml
+        deleted:    mychat/templates/_helpers.tpl
+        deleted:    mychat/templates/deployment.yaml
+        deleted:    mychat/templates/service.yaml
+        deleted:    mychat/values.yaml
+        deleted:    package/index.yaml
+        deleted:    package/mychat-0.1.0.tgz
+
+root@master:~/app/helm# ls
+root@master:~/app/helm# git --restore --states *
+unknown option: --restore
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+root@master:~/app/helm# git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    mychat/.helmignore
+        deleted:    mychat/Chart.yaml
+        deleted:    mychat/templates/_helpers.tpl
+        deleted:    mychat/templates/deployment.yaml
+        deleted:    mychat/templates/service.yaml
+        deleted:    mychat/values.yaml
+        deleted:    package/index.yaml
+        deleted:    package/mychat-0.1.0.tgz
+
+root@master:~/app/helm# git restore --staged *
+root@master:~/app/helm# ls
+root@master:~/app/helm# git status
+On branch main
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    mychat/.helmignore
+        deleted:    mychat/Chart.yaml
+        deleted:    mychat/templates/_helpers.tpl
+        deleted:    mychat/templates/deployment.yaml
+        deleted:    mychat/templates/service.yaml
+        deleted:    mychat/values.yaml
+        deleted:    package/index.yaml
+        deleted:    package/mychat-0.1.0.tgz
+
+no changes added to commit (use "git add" and/or "git commit -a")
+root@master:~/app/helm# git restore *
+root@master:~/app/helm# git status
+On branch main
+nothing to commit, working tree clean
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm#
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root@master:~/app/helm# git config -l
+user.email=mussawirimam@gmail.com
+user.name=mussawirimam
+credential.helper=store
+init.defaultbranch=main
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=git@github.com:mussawirimam/hrepo.git
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+root@master:~/app/helm# history
+
+
+ 2098  git config -l
+ 2099  git config branch.main.merge main
+ 2100  git config -l
+ 2101  git config --get branch.main.merge
+
+
+
+root@master:~/app/helm# helm repo add hrepo 'https://raw.githubusercontent.com/mussawirimam/hrepo/refs/heads/main/app/helm/package/index.yaml'
+Error: looks like "https://raw.githubusercontent.com/mussawirimam/hrepo/refs/heads/main/app/helm/package/index.yaml" is not a valid chart repository or cannot be reached: failed to fetch https://raw.githubusercontent.com/mussawirimam/hrepo/refs/heads/main/app/helm/package/index.yaml/index.yaml : 404 Not Found
+
+
+root@master:~/app/helm# helm repo add hrepo 'https://raw.githubusercontent.com/mussawirimam/hrepo/refs/heads/main/'
+Error: looks like "https://raw.githubusercontent.com/mussawirimam/hrepo/refs/heads/main/" is not a valid chart repository or cannot be reached: failed to fetch https://raw.githubusercontent.com/mussawirimam/hrepo/refs/heads/main/index.yaml : 404 Not Found
+
+
+root@master:~/app/helm# helm repo add hrepo 'https://raw.githubusercontent.com/mussawirimam/hrepo/refs/heads/main/helm/package/index.yaml'
+Error: looks like "https://raw.githubusercontent.com/mussawirimam/hrepo/refs/heads/main/helm/package/index.yaml" is not a valid chart repository or cannot be reached: failed to fetch https://raw.githubusercontent.com/mussawirimam/hrepo/refs/heads/main/helm/package/index.yaml/index.yaml : 404 Not Found
+
+root@master:~/app/helm#
+
+
+
+
+
+
+
+
+
+
+
+
+ create mode 100644 package/mychat-0.1.0.tgz
+root@master:~/app/helm# git commit -m 'new'
+On branch main
+nothing to commit, working tree clean
+root@master:~/app/helm# git push origin main
+To github.com:mussawirimam/hrepo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:mussawirimam/hrepo.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+root@master:~/app/helm# git pull origin main
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 24 (delta 0), reused 24 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (24/24), 3.99 KiB | 240.00 KiB/s, done.
+From github.com:mussawirimam/hrepo
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+root@master:~/app/helm# git config
+
+
+
+
+
+
+root@master:~/app/helm# git checkout
+FETCH_HEAD    HEAD          last          main          origin/main
+root@master:~/app/helm# git checkout origin/main
+Note: switching to 'origin/main'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 81f6450 helm repo
+root@master:~/app/helm#
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+### deleting the branch 
+
+root@master:~/app/helm# git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+root@master:~/app/helm# git branch -d -f last
+Deleted branch last (was 98f1847).
+root@master:~/app/helm# git push origin --delete last
+To github.com:mussawirimam/hrepo.git
+ - [deleted]         last
+root@master:~/app/helm#
+
+
+
+
+### deleting the file from remote repository and keeping it locally 
+mychat  package
+root@master:~/app/helm# git cd package/
+git: 'cd' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+root@master:~/app/helm# cd package/
+root@master:~/app/helm/package# ls
+index.yaml  mychat-0.1.0.tgz
+root@master:~/app/helm/package# git rm --cached index.yaml
+rm 'package/index.yaml'
+root@master:~/app/helm/package#  ls
+index.yaml  mychat-0.1.0.tgz
+root@master:~/app/helm/package# cd ..
+root@master:~/app/helm# git push origin main
+Everything up-to-date
+root@master:~/app/helm# git commit -m 'hh'
+[main 51e9a78] hh
+ 1 file changed, 14 deletions(-)
+ delete mode 100644 package/index.yaml
+root@master:~/app/helm# ls
+mychat  package
+root@master:~/app/helm# cd package/
+root@master:~/app/helm/package# ls
+index.yaml  mychat-0.1.0.tgz
+root@master:~/app/helm/package# cd ..
+root@master:~/app/helm# git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 305 bytes | 152.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:mussawirimam/hrepo.git
+   98f1847..51e9a78  main -> main
+root@master:~/app/helm#
+
+
+
+
+
+
+### To merge a second branch (e.g., second-branch) into the main branch, follow these steps:
+
+Steps to merge a branch into main:
+Switch to the main branch: First, ensure you’re on the main branch by running:
+
+bash
+Copy
+git checkout main
+Or, if you’re using Git 2.23 or later, you can use:
+
+bash
+Copy
+git switch main
+Pull the latest changes (optional but recommended): Before merging, it’s a good idea to make sure your main branch is up-to-date with the remote repository:
+
+bash
+Copy
+git pull origin main
+Merge the second branch into main: Now, merge the second-branch into main:
+
+bash
+Copy
+git merge second-branch
+If there are no conflicts, this will merge the changes from second-branch into main.
+
+Resolve any conflicts (if necessary): If there are any merge conflicts, Git will notify you. You’ll need to resolve them manually by editing the conflicting files. After resolving the conflicts, stage the changes:
+
+bash
+Copy
+git add <file_with_conflict>
+Then, complete the merge with:
+
+bash
+Copy
+git commit
+Git will usually auto-populate the commit message with a merge message, but you can edit it if needed.
+
+Push the changes to the remote repository: Once the merge is successful and you have committed any resolved conflicts, push the changes to the remote repository:
+
+bash
+Copy
+git push origin main
+Example:
+Checkout the main branch:
+
+bash
+Copy
+git checkout main
+Pull the latest updates from the remote repository (optional but recommended):
+
+bash
+Copy
+git pull origin main
+Merge second-branch into main:
+
+bash
+Copy
+git merge second-branch
+Push the changes to the remote main branch:
+
+bash
+Copy
+git push origin main
+Notes:
+Fast-forward merges: If there have been no changes on main since second-branch was created, the merge may be a fast-forward merge. In this case, Git simply moves the main pointer to the latest commit on second-branch.
+Merge conflicts: If you encounter conflicts during the merge, Git will mark the conflicting sections in the affected files. You’ll need to manually resolve these conflicts and then commit the resolved files.
+
