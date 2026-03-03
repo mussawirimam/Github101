@@ -46,7 +46,7 @@
    $ git push origin main
 
 -----------------------------------------------------
-### to delete old branch
+# To delete old branch
 # Switch to main branch
 git checkout main
 
