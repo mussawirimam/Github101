@@ -146,3 +146,6 @@
  1700  git clone git@github.com:mussawirimam/Github101.git
  1707  history|grep git
  1712  history|grep git > ruffhistory1.txt 
+
+
+git checkout -b main origin/main
