@@ -6,5 +6,5 @@ https://git-scm.com/docs
 https://github.com/settings/tokens
 
 ###
-git config --global --unset credential.helper
+git config --global --unset credential.helper <br>
 rm -rf ~/.git-credentials
