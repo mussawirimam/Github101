@@ -10,15 +10,11 @@ next step: click on permissions<br>
 next step: select contents<br>
 next step: select read and write next in access drop down menu<br>
 final step: generate token<br>
-
-### in cli
+### after the above, do this step in cli
 git branch<br>
 git push -u origin main<br>
 add username:<br>
 paste the token: <br>
-
-### to check which 
-
 
 
 ###
