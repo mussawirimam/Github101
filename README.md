@@ -35,7 +35,7 @@ git config user.name<br>
 git config user.email
 
 
-###
+### To Lists all configured remote repositories for your current Git repo.
 root@terra:~/gittesting/testing# git remote -v <br>
 origin  https://github.com/mussawirimam/testing.git (fetch)<br>
 origin  https://github.com/mussawirimam/testing.git (push)<br>
