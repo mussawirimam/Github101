@@ -2,7 +2,7 @@ https://www.markdownguide.org/basic-syntax/
 
 https://git-scm.com/docs
 
-### to create authentication token from the cli
+### to create authentication in GITHUB and then add the authentication token in cli
 https://github.com/settings/tokens<br>
 1st click on create token<br>
 next step: click on (Only select repositories)<br>
