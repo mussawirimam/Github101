@@ -23,6 +23,7 @@ rm -rf ~/.git-credentials
 
 
 ### 
+git remote add origin https://github.com/username/repo.git<br>
 git branch<br>
 git push -u origin main
 
