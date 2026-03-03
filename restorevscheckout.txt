@@ -1,0 +1,75 @@
+┌───────────────────────────────────────────────────────────────┐
+│                 GIT FILE/FOLDER RESTORE NOTES                │
+├───────────────────────────────────────────────────────────────┤
+│ Commands Covered:                                             │
+│   1. Old style: git checkout origin/main -- <file/folder>     │
+│   2. New style: git restore --source origin/main <file/folder>│
+├───────────────────────────────────────────────────────────────┤
+│ Purpose:                                                       │
+│   Restore a specific file or folder from a remote branch      │
+│   without switching branches.                                 │
+├───────────────────────────────────────────────────────────────┤
+│ 1️⃣ Old Version: git checkout                                  │
+│                                                               │
+│ Command:                                                      │
+│ git checkout origin/main -- introduction/                     │
+│                                                               │
+│ Breakdown:                                                    │
+│   origin/main → remote branch on GitHub                        │
+│   --           → separator, everything after treated as file/folder│
+│   introduction/ → folder to restore                             │
+│                                                               │
+│ Notes:                                                        │
+│   - Restores folder from remote                                │
+│   - Leaves your current branch intact                          │
+│   - Old syntax, still works but less explicit                  │
+│   - Can restore multiple files/folders:                        │
+│     git checkout origin/main -- folder1/ folder2/             │
+├───────────────────────────────────────────────────────────────┤
+│ 2️⃣ New Version: git restore                                  │
+│                                                               │
+│ Command:                                                      │
+│ git restore --source origin/main introduction/                │
+│                                                               │
+│ Breakdown:                                                    │
+│   --source origin/main → specify the branch to restore from    │
+│   introduction/        → file/folder to restore               │
+│                                                               │
+│ Notes:                                                        │
+│   - Modern, safer, and more explicit than checkout             │
+│   - Only restores specified files/folders                       │
+│   - Does not switch branches                                    │
+│   - Can restore multiple files/folders:                        │
+│     git restore --source origin/main folder1/ folder2/        │
+├───────────────────────────────────────────────────────────────┤
+│ ✅ Workflow Example:                                           │
+│                                                               │
+│ 1. Check your current branch                                   │
+│ git branch                                                    │
+│                                                               │
+│ 2. If in detached HEAD, switch to main                         │
+│ git checkout main                                              │
+│ OR create if missing                                           │
+│ git checkout -b main origin/main                               │
+│                                                               │
+│ 3. Restore deleted folder                                      │
+│ git restore --source origin/main introduction/                │
+│ OR older version: git checkout origin/main -- introduction/   │
+│                                                               │
+│ 4. Stage & commit restored folder                               │
+│ git add introduction/                                          │
+│ git commit -m "Restore introduction folder from origin/main"  │
+│                                                               │
+│ 5. Pull latest changes if needed                               │
+│ git pull                                                      │
+│                                                               │
+│ 6. Push changes to remote                                      │
+│ git push                                                      │
+├───────────────────────────────────────────────────────────────┤
+│ ⚠️ Tips & Warnings                                           │
+│                                                               │
+│ - Do NOT commit .terraform/, tfstate, or provider binaries    │
+│ - Use .gitignore for generated files                          │
+│ - Detached HEAD → cannot pull, must checkout a branch         │
+│ - Old checkout syntax still works but git restore is preferred│
+└───────────────────────────────────────────────────────────────┘
