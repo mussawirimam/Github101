@@ -3,19 +3,19 @@ https://www.markdownguide.org/basic-syntax/
 https://git-scm.com/docs
 
 ### to create authentication token from the cli
-https://github.com/settings/tokens
-1st click on create token
-next step: click on (Only select repositories)
-next step: click on permissions
-next step: select contents
-next step: select read and write next in access drop down menu
-final step: generate token
+https://github.com/settings/tokens<br>
+1st click on create token<br>
+next step: click on (Only select repositories)<br>
+next step: click on permissions<br>
+next step: select contents<br>
+next step: select read and write next in access drop down menu<br>
+final step: generate token<br>
 
 ### in cli
-git branch
-git push -u origin main
-add username:
-paste the token: 
+git branch<br>
+git push -u origin main<br>
+add username:<br>
+paste the token: <br>
 
 ### to check which 
 
@@ -31,7 +31,7 @@ git branch<br>
 git push -u origin main
 
 ### to check which username and email is being used
-git config user.name
+git config user.name<br>
 git config user.email
 
 
