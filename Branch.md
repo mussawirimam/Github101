@@ -34,3 +34,53 @@ Tips:
 - Branch names: use lowercase, hyphens or slashes (feature/login, bugfix/header)
 - Keep main branch clean; do work in feature branches
 - Regularly push branches to remote to backup work
+
+-----------------------------------------------------
+            Local Repository
+        +-----------------------+
+        |                       |
+        |         main          |
+        |         *             |
+        |                       |
+        +-----------+-----------+
+                    |
+                    | git checkout -b feature/login
+                    v
+        +-----------------------+
+        |   feature/login       |
+        |         *             |
+        +-----------+-----------+
+                    |
+                    | git add . && git commit -m "Add login feature"
+                    v
+        +-----------------------+
+        |   feature/login       |
+        |   commits ahead of main
+        +-----------+-----------+
+                    |
+                    | git push -u origin feature/login
+                    v
+            Remote Repository (GitHub)
+        +-----------------------+
+        |       main            |
+        |                       |
+        | feature/login (new)   |
+        +-----------------------+
+
+# Commands Summary:
+
+1. Create & switch to branch:
+   $ git checkout -b feature/login
+
+2. Work & commit:
+   $ git add .
+   $ git commit -m "Commit message"
+
+3. Push branch to remote:
+   $ git push -u origin feature/login
+
+4. Switch back to main:
+   $ git checkout main
+
+5. Merge branch (optional):
+   $ git merge feature/login
