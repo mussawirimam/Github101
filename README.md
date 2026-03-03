@@ -30,6 +30,10 @@ rm -rf ~/.git-credentials
 git branch<br>
 git push -u origin main
 
+### to check which username and email is being used
+git config user.name
+git config user.email
+
 
 ###
 root@terra:~/gittesting/testing# git remote -v <br>
