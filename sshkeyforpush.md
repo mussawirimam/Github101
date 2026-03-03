@@ -38,3 +38,53 @@
 - Optional: Add key to ssh-agent for passphrase caching:
   $ eval "$(ssh-agent -s)"
   $ ssh-add ~/.ssh/id_ed25519
+
+------------------------------------------------------
+          +------------------+
+          |  Local Machine   |
+          |  (your VPS/PC)   |
+          +--------+---------+
+                   |
+                   | ssh-keygen → ~/.ssh/id_ed25519 (+pub)
+                   |
+                   v
+          +------------------+
+          | GitHub Account   |
+          |  Settings → SSH  |
+          |  Paste Public Key|
+          +--------+---------+
+                   ^
+                   |
+                   | ssh auth
+                   |
+          +--------+---------+
+          | Git Remote Repo  |
+          |  git@github.com: |
+          |  username/repo.git|
+          +------------------+
+
+# Steps:
+
+1. Generate SSH key:
+   ssh-keygen -t ed25519 -C "your_email@example.com"
+
+2. Copy public key:
+   cat ~/.ssh/id_ed25519.pub
+
+3. Add key to GitHub:
+   https://github.com/settings/keys → "New SSH Key"
+
+4. Set remote URL to SSH:
+   git remote set-url origin git@github.com:username/repo.git
+
+5. Test SSH connection:
+   ssh -T git@github.com
+
+6. Push code:
+   git push -u origin main
+
+# Notes:
+- SSH avoids entering username/token repeatedly.
+- Can add key to ssh-agent for passphrase caching:
+  eval "$(ssh-agent -s)"
+  ssh-add ~/.ssh/id_ed25519
