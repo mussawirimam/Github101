@@ -1,0 +1,148 @@
+ 1384  git
+ 1387  curl https://github.com/mussawirimam/Cloudautomation.git
+ 1390  git config
+ 1391  git config --global
+ 1393  git config --global
+ 1401  git init
+ 1404  git -rf .git
+ 1405  rm -rf .git
+ 1408  git
+ 1413  mkdir gittesting
+ 1415  cd gittesting/
+ 1416  git clone https://github.com/kodekloudhub/kubernetes-devops-security.git
+ 1424  rm -rf gittesting/
+ 1425  mkdir gittesting
+ 1426  cd gittesting/
+ 1429  git init
+ 1430  git clone https://github.com/mussawirimam/testing.git
+ 1435  git -m "hello"
+ 1436  git commit -m "hello"
+ 1437  git config --global user.email "mussawirimam@gmail.com"
+ 1438  git config --global user.name "mussawirimam"
+ 1439  git push
+ 1440  git destroy
+ 1442  git push
+ 1443  git remote -v
+ 1444  git config --global --unset credential.helper
+ 1445  rm -rf ~/.git-credentials
+ 1446  git push
+ 1447  git push -u origin main
+ 1448  git branch
+ 1449  git push 
+ 1450  git push -u origin main
+ 1452  git commit -m 
+ 1453  git commit -m "hello"
+ 1454  git push
+ 1457  git remove -v
+ 1458  git remote -v
+ 1459  cat ~/.git-credentials
+ 1460  ls ~/.git-credentials
+ 1463  cd .git
+ 1478  git config --global credential.helper
+ 1480  git config --global credential.helper
+ 1482  git config user.name
+ 1483  git config user.email
+ 1484  man git
+ 1485  git remote -v
+ 1494  git push
+ 1496  git commit -m "update"
+ 1497  git add *
+ 1498  git commit -m "update"
+ 1499  git push
+ 1501  git config --global --unset credential.helper
+ 1502  rm -f ~/.git-credentials
+ 1503  git credential-cache exit
+ 1504  git remote -v
+ 1508  git remote set-url origin git@github.com:mussawirimam/testing.git
+ 1509  ssh -T git@github.com
+ 1511  git push -u origin main
+ 1514  git branch my-new-branch
+ 1515  git branch
+ 1516  git branch my-new-branch 
+ 1517  git branch
+ 1518  git checkout my-new-branch 
+ 1525  git add *
+ 1526  git commit -m
+ 1527  git commit -m "new branch"
+ 1528  git push 
+ 1529  git push --set-upstream origin my-new-branch
+ 1532  git log my-new-branch 
+ 1534  git diff main..my-new-branch 
+ 1536  git branch
+ 1537  git checkout main 
+ 1538  git pull
+ 1540  git pull origin main
+ 1541  git push 
+ 1542  git merge my-new-branch 
+ 1543  git push origin main
+ 1544  git branch -d my-new-branch 
+ 1545  git push origin --delete my-new-branch
+ 1552  git 
+ 1554  git branch
+ 1560  git config --global credential.helper
+ 1562  git remote get-url origin
+ 1565  cd gittesting/
+ 1566  git remote get-url origin
+ 1567  git remote -v
+ 1570  git push
+ 1575  git remote get-url origin
+ 1599  cd gittesting/
+ 1601  git branch
+ 1602  git remote -v
+ 1603  git config --global --unset credential.helper
+ 1604  git config user.name
+ 1605  git push -u origin main
+ 1606  git clone git@github.com:mussawirimam/testing.git
+ 1609  rm -rf .git/
+ 1610  git init 
+ 1611  git clone git@github.com:mussawirimam/testing.git
+ 1618  git add *
+ 1619  git commit -m "push"
+ 1620  git push origin main
+ 1627  mkdir gittesting2
+ 1628  cd gittesting2
+ 1631  git push
+ 1632  git init
+ 1634  git push 
+ 1635  git remote add origin git@github.com:mussawirimam/testing.git
+ 1636  git remote -v
+ 1637  git remote remove origin
+ 1638  git remote -v
+ 1639  git remote add origin git@github.com:mussawirimam/testing.git
+ 1640  git push 
+ 1641  git branch
+ 1642  git push -u origin main
+ 1643  git branch
+ 1645  git pull 
+ 1649  git add *
+ 1650  git commit -m "helllo"
+ 1651  git push
+ 1652  git push --set-upstream origin main
+ 1653  git pull
+ 1664  cd gittesting2/
+ 1665  git add *
+ 1667  git commit -m 
+ 1668  git commit -m "push"
+ 1669  git push 
+ 1670  git push --set-upstream origin main
+ 1671  git push -u origin master
+ 1672  git branch
+ 1674  git fetch origin
+ 1675  git branch -r
+ 1677  git pull
+ 1679  git branch main
+ 1681  git branch
+ 1682  git check out main
+ 1683  git checkout main
+ 1684  git pull
+ 1685  git branch --set-upstream-to=origin/master master
+ 1686  git branch --set-upstream-to=origin/main main
+ 1687  git pull
+ 1689  git config pull.rebase true
+ 1690  git pull
+ 1694  rm -rf gittesting2/
+ 1696  mkdir gittesting2
+ 1697  history |grep git
+ 1700  git clone git@github.com:mussawirimam/Github101.git
+ 1707  history|grep git
+ 1712  history|grep git > ruffhistory1.txt 
