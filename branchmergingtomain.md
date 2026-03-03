@@ -46,6 +46,16 @@
    $ git push origin main
 
 -----------------------------------------------------
+### to delete old branch
+# Switch to main branch
+git checkout main
+
+# Delete local branch
+git branch -d my-old-branch
+
+# Delete remote branch
+git push origin --delete my-old-branch
+-----------------------------------------------------
 Tips:
 - Use descriptive branch names (feature/login, bugfix/header)
 - Keep main branch stable; always work in feature branches
