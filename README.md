@@ -1,7 +1,8 @@
 https://www.markdownguide.org/basic-syntax/
 
 https://git-scm.com/docs
-
+### 
+https://github.com/settings/personal-access-tokens
 ### to create authentication token in GITHUB and then add the authentication token in cli
 https://github.com/settings/tokens<br>
 1st click on create token<br>
