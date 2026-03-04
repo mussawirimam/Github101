@@ -1,0 +1,62 @@
+Got it! Here’s a full ASCII-style markdown note for merging master into main in a file called ascii.md.
+# Git Notes: Merging `master` into `main`
+
+---
+
+## Step-by-Step Commands
+
+### 1️⃣ Check Current Branch
+```bash
+git status
+Confirms which branch you are on.
+Output example: On branch main
+2️⃣ Switch to main
+git checkout main
+# or modern
+git switch main
+HEAD now points to main.
+All changes and commits will apply here.
+3️⃣ Fetch Latest Changes from Remote
+git fetch origin
+Updates remote-tracking branches.
+Does not modify local branches.
+4️⃣ Merge master into main
+git merge master
+Integrates commits from master into main.
+Creates a merge commit if branches diverged.
+Fast-forward merge if main has no unique commits.
+5️⃣ Resolve Conflicts (if any)
+# Edit conflicted files
+git add <file>
+git commit   # complete the merge if Git didn't auto-commit
+Conflicts occur when both branches changed the same lines.
+6️⃣ Push Merged main to Remote
+git push origin main
+Updates remote repository with merged changes.
+7️⃣ Verify Merged History
+git log --oneline --graph --all
+Check that main now contains all commits from master.
+ASCII Visualization of Merge
+Before Merge:
+main:   A --- B
+master: A --- B --- C --- D
+
+After Merge:
+main:   A --- B --- M
+                / \
+master:        C --- D
+M = merge commit
+Quick Command Summary
+git status                  # check current branch
+git switch main             # switch to main
+git fetch origin            # update remote tracking branches
+git merge master            # merge master into main
+# resolve conflicts if any
+git push origin main        # push merged main to remote
+git log --oneline --graph --all  # verify merge
+
+This can be saved directly as `ascii.md` and viewed as a **step-by-step reference guide** for merging branches.  
+
+If you want, I can also **make a fully visual ASCII workflow diagram** showing HEAD, branches, fetch, merge, and push in one single diagram for this markdown — it’s very intuitive.  
+
+Do you want me to do that?
