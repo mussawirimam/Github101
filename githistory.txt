@@ -164,3 +164,28 @@ git switch -c main origin/main
 git fetch origin
 git log HEAD..origin/main   # see incoming changes
 git merge origin/main       # merge manually
+
+### GIT HEAD
+root@terra:~/github101# git log --oneline --graph --decorate -5
+* a7c73c3 (HEAD -> master) fetchvsmerge
+* 1452d7c Update githistory.txt
+*   8f0e074 Merge pull request #2 from mussawirimam/master
+|\  
+| * 3dbe08f githistory.txt
+* | b65c97e Merge pull request #1 from mussawirimam/master
+|\| 
+root@terra:~/github101# 
+root@terra:~/github101# 
+root@terra:~/github101# git switch main
+Switched to branch 'main'
+Your branch is up to date with 'main/main'.
+root@terra:~/github101# 
+root@terra:~/github101# 
+root@terra:~/github101# git log --oneline --graph --decorate -5
+* 38b0bb0 (HEAD -> main, main/main) mergingnotes
+* a7c73c3 (master) fetchvsmerge
+* 1452d7c Update githistory.txt
+*   8f0e074 Merge pull request #2 from mussawirimam/master
+|\  
+| * 3dbe08f githistory.txt
+root@terra:~/github101# 
