@@ -133,6 +133,7 @@ git restore introduction
 git restore introduction/
 
 git rm -r --cached .terraform
+### changes that are to be or staged
 git status
 
 history |grep git > githistory.txt
