@@ -1,0 +1,68 @@
+┌───────────────────────────────────────────────────────────────┐
+│                     FETCH vs MERGE                           │
+├───────────────────────────────────────────────────────────────┤
+│ 1️⃣ git fetch                                                 │
+│                                                               │
+│ Purpose:                                                      │
+│   Download commits from remote (GitHub)                      │
+│   WITHOUT changing your current branch.                      │
+│                                                               │
+│ What it updates:                                              │
+│   - Updates remote-tracking branch (origin/main)              │
+│   - Does NOT modify local main                                │
+│                                                               │
+│ Command:                                                      │
+│   git fetch origin                                            │
+│                                                               │
+│ ASCII:                                                        │
+│                                                               │
+│ Before:                                                       │
+│ Local main:   A --- B                                         │
+│ Remote main:  A --- B --- C                                   │
+│                                                               │
+│ After git fetch:                                              │
+│ Local main:   A --- B         (unchanged)                     │
+│ origin/main:  A --- B --- C   (updated)                       │
+│                                                               │
+│ ✔ Safe                                                         │
+│ ✔ No working directory changes                                │
+│ ✔ Lets you inspect changes first                              │
+├───────────────────────────────────────────────────────────────┤
+│ 2️⃣ git merge                                                 │
+│                                                               │
+│ Purpose:                                                      │
+│   Combine another branch into your current branch.            │
+│                                                               │
+│ What it does:                                                 │
+│   - Takes commits from another branch                         │
+│   - Integrates them into your current branch                  │
+│   - May create a merge commit                                 │
+│                                                               │
+│ Command (after fetch):                                        │
+│   git merge origin/main                                       │
+│                                                               │
+│ ASCII:                                                        │
+│                                                               │
+│ Before:                                                       │
+│ Local main:   A --- B                                         │
+│ origin/main:  A --- B --- C                                   │
+│                                                               │
+│ After git merge origin/main:                                  │
+│ Local main:   A --- B --- C                                   │
+│                                                               │
+│ ✔ Changes local branch                                        │
+│ ✔ Updates working directory                                   │
+│ ✔ May cause conflicts                                         │
+├───────────────────────────────────────────────────────────────┤
+│ 🔑 Key Difference                                             │
+│                                                               │
+│ git fetch  → Download only                                    │
+│ git merge  → Apply/Combine changes                            │
+├───────────────────────────────────────────────────────────────┤
+│ 🧠 Safe Workflow (Recommended)                                │
+│                                                               │
+│ git fetch origin                                              │
+│ git log HEAD..origin/main   ← See incoming commits            │
+│ git merge origin/main                                        │
+│ git push                                                     │
+└───────────────────────────────────────────────────────────────┘
