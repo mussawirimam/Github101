@@ -1,0 +1,46 @@
+🔄 git fetch vs git pull
+Both commands are used to get changes from a remote repository (like origin), but they behave differently.
+📥 git fetch
+What it does:
+Downloads new commits, branches, and tags from the remote repository — but does NOT merge them into your current branch.
+In simple terms:
+“Check what’s new, but don’t change my working files.”
+What happens:
+Updates remote-tracking branches (e.g., origin/main)
+Your current branch stays exactly the same
+No automatic merge
+Example:
+git fetch origin
+After fetching, you can review changes:
+git log HEAD..origin/main
+git diff main origin/main
+✅ Safer when you want to review changes before merging.
+📥 git pull
+What it does:
+Fetches changes and immediately merges them into your current branch.
+In simple terms:
+“Get the latest changes and apply them to my branch.”
+What actually happens:
+git pull = git fetch + git merge
+Example:
+git pull origin main
+⚠️ This can create merge commits or conflicts right away.
+⚖️ Key Differences
+Feature	git fetch	git pull
+Downloads remote changes	✅	✅
+Modifies your current branch	❌	✅
+Automatically merges	❌	✅
+Safer for inspection	✅	❌
+🧠 When to Use Which?
+Use git fetch when:
+You want to review changes before merging
+You're working in a team and want control
+You're unsure about remote updates
+Use git pull when:
+You just want the latest updates quickly
+You're confident no conflicts will occur
+🔥 Pro Tip
+Many teams prefer:
+git pull --rebase
+This fetches changes and rebases instead of merging — keeping history cleaner.
+If you'd like, I can also explain fetch vs clone or merge vs rebase.
