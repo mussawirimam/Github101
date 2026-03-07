@@ -23,13 +23,15 @@
 
 5. Change your Git repo remote to SSH:
    $ git remote set-url origin git@github.com:username/repo.git
+   # or with ssh
+   $ git remote add origin git@github.com:username/repo.git
 
-6. Verify remote URL:
+7. Verify remote URL:
    $ git remote -v
    origin  git@github.com:username/repo.git (fetch)
    origin  git@github.com:username/repo.git (push)
 
-7. Push to GitHub using SSH (no password required):
+8. Push to GitHub using SSH (no password required):
    $ git push -u origin main
 
 # Notes:
