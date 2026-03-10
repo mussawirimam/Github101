@@ -189,3 +189,7 @@ root@terra:~/github101# git log --oneline --graph --decorate -5
 |\  
 | * 3dbe08f githistory.txt
 root@terra:~/github101# 
+
+
+### VERY IMPORTANT COMMAND
+ 1771  git pull --no-rebase origin main
